@@ -1,0 +1,1802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Joheliv Labs | Where code becomes codex</title>
+<meta name="description" content="Joheliv Labs is a South African software studio founded in 2026. We build apps, websites, online stores and custom digital products. Where code becomes codex.">
+<meta name="keywords" content="Joheliv Labs, software development South Africa, app development, web development, online stores, UI UX design, Jason Mufamadi, codex">
+<meta name="author" content="Joheliv Labs">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#07070d">
+<link rel="canonical" href="https://johelivlabs.co/">
+
+<!-- PWA / Icons -->
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Joheliv Labs">
+<meta property="og:title" content="Joheliv Labs | Where code becomes codex">
+<meta property="og:description" content="Apps, websites, online stores and custom software built in South Africa. Founded 2026.">
+<meta property="og:url" content="https://johelivlabs.co/">
+<meta property="og:image" content="https://johelivlabs.co/icon-512.png">
+<meta property="og:locale" content="en_ZA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Joheliv Labs | Where code becomes codex">
+<meta name="twitter:description" content="Apps, websites, online stores and custom software built in South Africa.">
+<meta name="twitter:image" content="https://johelivlabs.co/icon-512.png">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://johelivlabs.co/#organization",
+      "name": "Joheliv Labs",
+      "slogan": "Where code becomes codex",
+      "url": "https://johelivlabs.co/",
+      "logo": "https://johelivlabs.co/icon-512.png",
+      "foundingDate": "2026",
+      "foundingLocation": { "@type": "Place", "name": "South Africa" },
+      "email": "labs@johelivlabs.co",
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": "+27-73-859-2196",
+        "contactType": "customer support",
+        "email": "labs@johelivlabs.co",
+        "areaServed": "ZA",
+        "availableLanguage": "English"
+      }],
+      "founder": {
+        "@type": "Person",
+        "name": "Jason Mufamadi",
+        "alternateName": "T.J.",
+        "jobTitle": "Chief Executive Officer"
+      },
+      "address": { "@type": "PostalAddress", "addressCountry": "ZA" }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://johelivlabs.co/#website",
+      "url": "https://johelivlabs.co/",
+      "name": "Joheliv Labs",
+      "publisher": { "@id": "https://johelivlabs.co/#organization" },
+      "inLanguage": "en-ZA"
+    }
+  ]
+}
+</script>
+
+<style>
+/* ============ RESET & BASE ============ */
+*,*::before,*::after{box-sizing:border-box}
+*{margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+:root{
+  --bg:#07070d;
+  --bg-2:#0d0d17;
+  --bg-3:#12121f;
+  --line:#1e1e30;
+  --line-2:#2a2a42;
+  --text:#e8e8f2;
+  --muted:#9a9ab0;
+  --dim:#6a6a82;
+  --acc:#7c5cff;
+  --acc-2:#22d3ee;
+  --acc-3:#f472b6;
+  --grad:linear-gradient(135deg,#7c5cff 0%,#22d3ee 100%);
+  --grad-2:linear-gradient(135deg,#f472b6 0%,#7c5cff 100%);
+  --radius:16px;
+  --radius-sm:10px;
+  --shadow:0 20px 60px -20px rgba(0,0,0,.7);
+  --maxw:1200px;
+}
+body{
+  font-family:"Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.65;
+  font-size:16px;
+  overflow-x:hidden;
+  min-height:100vh;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+ul{list-style:none}
+h1,h2,h3,h4{line-height:1.2;font-weight:800;letter-spacing:-.02em}
+h1{font-size:clamp(2rem,5vw,3.6rem)}
+h2{font-size:clamp(1.6rem,3.5vw,2.4rem)}
+h3{font-size:1.2rem}
+p{color:var(--muted)}
+::selection{background:var(--acc);color:#fff}
+
+/* ============ LAYOUT ============ */
+.container{max-width:var(--maxw);margin:0 auto;padding:0 24px;width:100%}
+.section{padding:80px 0}
+.section-alt{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.section-head{max-width:680px;margin-bottom:48px}
+.section-head h2{margin:8px 0 12px}
+.muted{color:var(--muted)}
+.center{text-align:center}
+.mt-32{margin-top:32px}
+.mt-16{margin-top:16px}
+.split{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.grid{display:grid;gap:20px}
+.grid-2{grid-template-columns:repeat(2,1fr)}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.grid-4{grid-template-columns:repeat(4,1fr)}
+
+/* ============ TYPOGRAPHY HELPERS ============ */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;
+  color:var(--acc-2);margin-bottom:4px;
+}
+.eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--acc-2);box-shadow:0 0 12px var(--acc-2)}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{font-size:1.1rem;max-width:560px}
+
+/* ============ BUTTONS ============ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:13px 24px;border-radius:999px;font-weight:700;font-size:.95rem;
+  transition:transform .2s,box-shadow .2s,background .2s,border-color .2s;
+  border:1px solid transparent;white-space:nowrap;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--grad);color:#fff;box-shadow:0 10px 30px -8px rgba(124,92,255,.6)}
+.btn-primary:hover{box-shadow:0 14px 40px -8px rgba(124,92,255,.8)}
+.btn-ghost{border-color:var(--line-2);color:var(--text);background:rgba(255,255,255,.02)}
+.btn-ghost:hover{border-color:var(--acc);background:rgba(124,92,255,.08)}
+.btn-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.link{color:var(--acc-2);font-weight:600;font-size:.9rem}
+.link:hover{color:var(--acc)}
+
+/* ============ HEADER ============ */
+.site-header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(7,7,13,.82);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:10px;font-size:1.1rem;font-weight:700;color:var(--text)}
+.brand img{border-radius:9px}
+.brand strong{color:var(--acc-2)}
+.site-nav ul{display:flex;align-items:center;gap:4px}
+.site-nav a{
+  padding:9px 14px;border-radius:999px;font-size:.9rem;font-weight:600;
+  color:var(--muted);transition:color .2s,background .2s;
+}
+.site-nav a:hover{color:var(--text);background:rgba(255,255,255,.05)}
+.site-nav a[aria-current="page"]{color:var(--text);background:rgba(124,92,255,.14)}
+.nav-cta{background:var(--grad)!important;color:#fff!important;box-shadow:0 6px 20px -6px rgba(124,92,255,.6)}
+.nav-toggle{display:none;flex-direction:column;gap:5px;padding:10px;border-radius:8px}
+.nav-toggle span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:.3s}
+.nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ============ HERO ============ */
+.hero{position:relative;padding:90px 0 100px;overflow:hidden}
+.hero-glow{
+  position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(circle at 15% 20%,rgba(124,92,255,.18),transparent 45%),
+    radial-gradient(circle at 85% 30%,rgba(34,211,238,.13),transparent 45%),
+    radial-gradient(circle at 50% 100%,rgba(244,114,182,.08),transparent 50%);
+}
+.hero-inner{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.hero-copy h1{margin:8px 0 18px}
+.hero-points{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.hero-points li{
+  font-size:.82rem;font-weight:600;color:var(--muted);
+  border:1px solid var(--line-2);border-radius:999px;padding:6px 14px;
+  background:rgba(255,255,255,.02);
+}
+.hero-panel{
+  background:var(--bg-3);border:1px solid var(--line-2);border-radius:var(--radius);
+  box-shadow:var(--shadow);overflow:hidden;
+}
+.panel-bar{display:flex;align-items:center;gap:6px;padding:12px 16px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.02)}
+.panel-bar i{width:10px;height:10px;border-radius:50%;background:var(--line-2)}
+.panel-bar i:nth-child(1){background:#ff5f57}
+.panel-bar i:nth-child(2){background:#febc2e}
+.panel-bar i:nth-child(3){background:#28c840}
+.panel-bar span{margin-left:8px;font-size:.75rem;color:var(--dim);font-family:ui-monospace,Menlo,Consolas,monospace}
+.code{
+  font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.82rem;line-height:1.7;
+  padding:20px;color:#c8c8dc;overflow-x:auto;white-space:pre;
+}
+.c-key{color:#c792ea}.c-fn{color:#82aaff}.c-str{color:#c3e88d}
+.c-num{color:#f78c6c}.c-com{color:#5c6370;font-style:italic}
+
+/* ============ BAND / STATS ============ */
+.band{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:36px 0}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.stat strong{display:block;font-size:2rem;font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{font-size:.82rem;color:var(--dim);text-transform:uppercase;letter-spacing:.1em}
+
+/* ============ CARDS ============ */
+.card{
+  background:var(--bg-2);border:1px solid var(--line);border-radius:var(--radius);
+  padding:28px;transition:transform .25s,border-color .25s,box-shadow .25s;
+}
+.card:hover{transform:translateY(-4px);border-color:var(--acc);box-shadow:0 20px 50px -20px rgba(124,92,255,.4)}
+.card .icon{
+  width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;
+  font-size:1.4rem;background:rgba(124,92,255,.12);border:1px solid var(--line-2);margin-bottom:18px;
+}
+.card h3{margin-bottom:8px}
+.card p{font-size:.92rem;margin-bottom:14px}
+
+/* ============ PROCESS ============ */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:step}
+.steps li{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--radius);padding:26px;position:relative}
+.steps li span{font-size:.8rem;font-weight:800;color:var(--acc-2);letter-spacing:.1em}
+.steps li h3{margin:10px 0 8px}
+.steps li p{font-size:.9rem}
+
+/* ============ QUOTE CARD ============ */
+.quote-card{
+  background:linear-gradient(135deg,rgba(124,92,255,.12),rgba(34,211,238,.08));
+  border:1px solid var(--line-2);border-radius:var(--radius);padding:36px;
+}
+.quote-card p{font-size:1.15rem;color:var(--text);font-weight:500;font-style:italic;line-height:1.6}
+.quote-card footer{margin-top:18px;font-size:.88rem;color:var(--acc-2);font-weight:700}
+
+/* ============ CTA BAND ============ */
+.cta-band{background:var(--bg-2);border-top:1px solid var(--line);padding:60px 0}
+.cta-inner{display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.cta-inner .btn-row{margin-top:0}
+
+/* ============ PRODUCTS ============ */
+.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.product-card{
+  background:var(--bg-2);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;text-align:center;transition:transform .25s,border-color .25s,box-shadow .25s;
+  display:flex;flex-direction:column;align-items:center;gap:12px;
+}
+.product-card:hover{transform:translateY(-4px);border-color:var(--acc);box-shadow:0 20px 50px -20px rgba(124,92,255,.45)}
+.product-thumb{
+  width:100px;height:100px;border-radius:18px;overflow:hidden;
+  border:1px solid var(--line-2);background:var(--bg-3);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.product-thumb img{width:100%;height:100%;object-fit:cover}
+.product-thumb .fallback{font-size:1.8rem;font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.product-card h3{font-size:1rem;margin:0}
+.product-card p{font-size:.82rem;margin:0;min-height:2.4em}
+.product-card .btn{padding:8px 16px;font-size:.82rem;margin-top:auto}
+
+/* Empty state */
+.empty-state{
+  grid-column:1/-1;text-align:center;padding:60px 24px;
+  border:1px dashed var(--line-2);border-radius:var(--radius);
+}
+.empty-state h3{margin-bottom:8px}
+.empty-state p{font-size:.92rem;max-width:520px;margin:0 auto}
+.empty-state code{
+  font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.82rem;
+  background:var(--bg-3);border:1px solid var(--line-2);border-radius:6px;
+  padding:2px 7px;color:var(--acc-2);
+}
+
+/* ============ PAGE HEADER ============ */
+.page-hero{padding:64px 0 40px;border-bottom:1px solid var(--line);background:var(--bg-2);position:relative;overflow:hidden}
+.page-hero::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(circle at 20% 50%,rgba(124,92,255,.12),transparent 50%);
+}
+.page-hero .container{position:relative}
+.page-hero h1{margin:8px 0 12px}
+.page-hero .lede{max-width:640px}
+.breadcrumb{font-size:.8rem;color:var(--dim);margin-top:20px}
+.breadcrumb a{color:var(--acc-2)}
+.breadcrumb a:hover{color:var(--acc)}
+
+/* ============ FORMS ============ */
+.form{display:grid;gap:18px;max-width:640px}
+.field{display:flex;flex-direction:column;gap:7px}
+.field label{font-size:.85rem;font-weight:600;color:var(--text)}
+.field input,.field textarea,.field select{
+  background:var(--bg-2);border:1px solid var(--line-2);border-radius:var(--radius-sm);
+  padding:13px 16px;color:var(--text);font:inherit;font-size:.95rem;
+  transition:border-color .2s,box-shadow .2s;width:100%;
+}
+.field input:focus,.field textarea:focus,.field select:focus{
+  outline:none;border-color:var(--acc);box-shadow:0 0 0 3px rgba(124,92,255,.18);
+}
+.field textarea{resize:vertical;min-height:140px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.contact-info{display:grid;gap:18px}
+.contact-item{
+  display:flex;gap:14px;align-items:flex-start;
+  background:var(--bg-2);border:1px solid var(--line);border-radius:var(--radius);padding:20px;
+}
+.contact-item .icon{
+  width:42px;height:42px;border-radius:11px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;font-size:1.1rem;
+  background:rgba(124,92,255,.12);border:1px solid var(--line-2);
+}
+.contact-item h4{font-size:.95rem;margin-bottom:3px}
+.contact-item a,.contact-item p{font-size:.88rem;color:var(--muted)}
+.contact-item a:hover{color:var(--acc-2)}
+
+/* ============ PRICING ============ */
+.price-card{
+  background:var(--bg-2);border:1px solid var(--line);border-radius:var(--radius);
+  padding:32px;display:flex;flex-direction:column;position:relative;transition:transform .25s,border-color .25s;
+}
+.price-card:hover{transform:translateY(-4px);border-color:var(--acc)}
+.price-card.featured{border-color:var(--acc);box-shadow:0 20px 60px -20px rgba(124,92,255,.5)}
+.price-card.featured::before{
+  content:"Most popular";position:absolute;top:-12px;left:50%;transform:translateX(-50%);
+  background:var(--grad);color:#fff;font-size:.72rem;font-weight:800;
+  padding:5px 14px;border-radius:999px;letter-spacing:.08em;text-transform:uppercase;
+}
+.price-card h3{font-size:1.15rem;margin-bottom:6px}
+.price-card .price{font-size:2.4rem;font-weight:800;margin:14px 0 4px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.price-card .price small{font-size:.85rem;font-weight:600;color:var(--dim);-webkit-text-fill-color:var(--dim)}
+.price-card .desc{font-size:.88rem;margin-bottom:20px}
+.price-card ul{display:grid;gap:10px;margin-bottom:26px;flex-grow:1}
+.price-card li{font-size:.88rem;color:var(--muted);padding-left:24px;position:relative}
+.price-card li::before{content:"✓";position:absolute;left:0;color:var(--acc-2);font-weight:800}
+
+/* ============ FAQ ============ */
+.faq-list{display:grid;gap:12px;max-width:820px;margin:0 auto}
+.faq-item{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden}
+.faq-item summary{
+  padding:20px 24px;font-weight:600;cursor:pointer;list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:16px;
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";font-size:1.3rem;color:var(--acc-2);transition:transform .25s;font-weight:400}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item .faq-body{padding:0 24px 22px;color:var(--muted);font-size:.92rem;line-height:1.7}
+
+/* ============ BLOG ============ */
+.blog-card{
+  background:var(--bg-2);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;transition:transform .25s,border-color .25s;display:flex;flex-direction:column;
+}
+.blog-card:hover{transform:translateY(-4px);border-color:var(--acc)}
+.blog-thumb{height:150px;background:linear-gradient(135deg,rgba(124,92,255,.3),rgba(34,211,238,.2));display:flex;align-items:center;justify-content:center;font-size:2.4rem}
+.blog-body{padding:22px;display:flex;flex-direction:column;gap:10px;flex-grow:1}
+.blog-body .tag{font-size:.72rem;font-weight:700;color:var(--acc-2);text-transform:uppercase;letter-spacing:.1em}
+.blog-body h3{font-size:1.05rem}
+.blog-body p{font-size:.88rem;flex-grow:1}
+.blog-body .date{font-size:.78rem;color:var(--dim)}
+
+/* ============ TEAM ============ */
+.team-card{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--radius);padding:28px;text-align:center}
+.team-avatar{
+  width:96px;height:96px;border-radius:50%;margin:0 auto 18px;
+  background:var(--grad);display:flex;align-items:center;justify-content:center;
+  font-size:1.8rem;font-weight:800;color:#fff;border:2px solid var(--line-2);
+}
+.team-card h3{font-size:1.05rem}
+.team-card .role{font-size:.82rem;color:var(--acc-2);font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin:4px 0 10px}
+.team-card p{font-size:.88rem}
+
+/* ============ LEGAL / POLICY CONTENT ============ */
+.legal{max-width:820px;margin:0 auto}
+.legal h2{font-size:1.4rem;margin:36px 0 12px}
+.legal h2:first-child{margin-top:0}
+.legal h3{font-size:1.05rem;margin:22px 0 8px;color:var(--text)}
+.legal p,.legal li{color:var(--muted);font-size:.94rem;margin-bottom:10px}
+.legal ul{padding-left:22px;list-style:disc;margin-bottom:14px}
+.legal ul li{margin-bottom:6px}
+.legal a{color:var(--acc-2)}
+.legal a:hover{color:var(--acc)}
+
+/* ============ SITEMAP ============ */
+.sitemap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.sitemap-col h3{font-size:1rem;margin-bottom:14px;color:var(--acc-2)}
+.sitemap-col ul{display:grid;gap:8px}
+.sitemap-col a{font-size:.9rem;color:var(--muted)}
+.sitemap-col a:hover{color:var(--acc-2)}
+
+/* ============ FOOTER ============ */
+.site-footer{background:var(--bg-2);border-top:1px solid var(--line);padding:64px 0 28px;margin-top:0}
+.f-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.3fr;gap:40px;margin-bottom:48px}
+.f-brand .brand{margin-bottom:14px}
+.f-slogan{font-size:.9rem;color:var(--acc-2);font-weight:600;margin-bottom:6px}
+.f-meta{font-size:.82rem;color:var(--dim)}
+.f-col h4{font-size:.82rem;text-transform:uppercase;letter-spacing:.12em;color:var(--text);margin-bottom:16px}
+.f-col ul{display:grid;gap:10px}
+.f-col a{font-size:.88rem;color:var(--muted);transition:color .2s}
+.f-col a:hover{color:var(--acc-2)}
+.f-bottom{
+  border-top:1px solid var(--line);padding-top:24px;
+  display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;
+}
+.f-bottom p{font-size:.82rem;color:var(--dim)}
+.f-legal{display:flex;gap:20px}
+.f-legal a{font-size:.82rem;color:var(--dim)}
+.f-legal a:hover{color:var(--acc-2)}
+
+/* ============ SKIP LINK ============ */
+.skip{
+  position:absolute;left:-9999px;top:0;z-index:200;
+  background:var(--acc);color:#fff;padding:12px 20px;border-radius:0 0 8px 0;font-weight:600;
+}
+.skip:focus{left:0}
+
+/* ============ REVEAL ANIMATION ============ */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* ============ PAGE TRANSITIONS ============ */
+[data-page]{animation:fadeIn .35s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:980px){
+  .hero-inner,.split,.contact-grid{grid-template-columns:1fr;gap:40px}
+  .grid-3,.grid-4,.product-grid,.steps,.sitemap-grid{grid-template-columns:repeat(2,1fr)}
+  .f-grid{grid-template-columns:1fr 1fr;gap:32px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:760px){
+  .nav-toggle{display:flex}
+  .site-nav{
+    position:absolute;top:68px;left:0;right:0;
+    background:var(--bg-2);border-bottom:1px solid var(--line);
+    max-height:0;overflow:hidden;transition:max-height .3s ease;
+  }
+  .site-nav.open{max-height:520px}
+  .site-nav ul{flex-direction:column;align-items:stretch;padding:12px;gap:2px}
+  .site-nav a{padding:13px 16px;border-radius:10px}
+  .section{padding:56px 0}
+  .hero{padding:60px 0 70px}
+  .grid-2,.grid-3,.grid-4,.product-grid,.steps,.sitemap-grid{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr;gap:32px}
+  .f-bottom{flex-direction:column;text-align:center}
+  .cta-inner{flex-direction:column;text-align:center}
+  .cta-inner .btn-row{justify-content:center}
+  .section-head{margin-bottom:32px}
+}
+@media (max-width:420px){
+  .container{padding:0 18px}
+  .btn{padding:12px 20px;font-size:.9rem}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#/home" aria-label="Joheliv Labs home">
+      <img src="icon-192.png" alt="Joheliv Labs logo" width="40" height="40" onerror="this.style.display='none'">
+      <span><strong>Joheliv</strong> Labs</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="#/home" data-nav="home">Home</a></li>
+        <li><a href="#/about" data-nav="about">About</a></li>
+        <li><a href="#/services" data-nav="services">Services</a></li>
+        <li><a href="#/apps" data-nav="apps">Apps</a></li>
+        <li><a href="#/portfolio" data-nav="portfolio">Portfolio</a></li>
+        <li><a href="#/pricing" data-nav="pricing">Pricing</a></li>
+        <li><a href="#/blog" data-nav="blog">Blog</a></li>
+        <li><a class="nav-cta" href="#/contact" data-nav="contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============================================================
+     PAGE 1 — HOME
+     ============================================================ -->
+<section data-page="home" hidden>
+  <div class="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span> South African software studio · Est. 2026</p>
+        <h1>Where code becomes <span class="grad">codex</span>.</h1>
+        <p class="lede">
+          Joheliv Labs designs and builds apps, websites, online stores and custom
+          software — turning raw lines of code into products people actually use.
+        </p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="#/apps">Explore our apps</a>
+          <a class="btn btn-ghost" href="#/contact">Start a project</a>
+        </div>
+        <ul class="hero-points">
+          <li>Apps &amp; mobile</li>
+          <li>Websites</li>
+          <li>Online stores</li>
+          <li>UI/UX design</li>
+        </ul>
+      </div>
+      <div class="hero-panel" aria-hidden="true">
+        <div class="panel-bar"><i></i><i></i><i></i><span>joheliv.labs</span></div>
+        <pre class="code"><span class="c-key">const</span> lab = <span class="c-fn">create</span>({
+  name: <span class="c-str">"Joheliv Labs"</span>,
+  motto: <span class="c-str">"Where code becomes codex"</span>,
+  since: <span class="c-num">2026</span>,
+  builds: [<span class="c-str">"apps"</span>, <span class="c-str">"websites"</span>, <span class="c-str">"stores"</span>]
+});
+
+lab.<span class="c-fn">ship</span>(); <span class="c-com">// → codex ✦</span></pre>
+      </div>
+    </div>
+  </div>
+
+  <div class="band">
+    <div class="container stats">
+      <div class="stat"><strong>2026</strong><span>Founded</span></div>
+      <div class="stat"><strong>16</strong><span>Pages of know-how</span></div>
+      <div class="stat"><strong>30+</strong><span>Product slots ready</span></div>
+      <div class="stat"><strong>ZA</strong><span>Proudly South African</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">What we do</p>
+        <h2>Everything that requires code &amp; design</h2>
+        <p class="muted">From a first sketch to a shipped product — we handle the whole build.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card reveal">
+          <div class="icon">📱</div>
+          <h3>App Development</h3>
+          <p>Android, iOS and cross-platform apps built for speed, stability and real users.</p>
+          <a class="link" href="#/services">Learn more →</a>
+        </article>
+        <article class="card reveal">
+          <div class="icon">🌐</div>
+          <h3>Website Development</h3>
+          <p>Fast, accessible, SEO-ready websites — business sites, landing pages and web apps.</p>
+          <a class="link" href="#/services">Learn more →</a>
+        </article>
+        <article class="card reveal">
+          <div class="icon">🛒</div>
+          <h3>Online Stores</h3>
+          <p>E-commerce builds with payments, inventory, delivery logic and clean checkout flows.</p>
+          <a class="link" href="#/services">Learn more →</a>
+        </article>
+        <article class="card reveal">
+          <div class="icon">🎨</div>
+          <h3>UI / UX Design</h3>
+          <p>Interfaces, design systems, logos and brand kits that make products feel premium.</p>
+          <a class="link" href="#/services">Learn more →</a>
+        </article>
+        <article class="card reveal">
+          <div class="icon">⚙️</div>
+          <h3>Custom Software</h3>
+          <p>Dashboards, booking systems, automation and internal tools tailored to your workflow.</p>
+          <a class="link" href="#/services">Learn more →</a>
+        </article>
+        <article class="card reveal">
+          <div class="icon">🚀</div>
+          <h3>Launch &amp; Support</h3>
+          <p>Hosting, deployment, maintenance and ongoing improvements after you go live.</p>
+          <a class="link" href="#/support">Learn more →</a>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Our products</p>
+        <h2>Featured apps</h2>
+        <p class="muted">Built by Joheliv Labs. New releases appear here automatically.</p>
+      </div>
+      <div id="featured-grid" class="product-grid"></div>
+      <div class="center mt-32"><a class="btn btn-ghost" href="#/apps">View all apps →</a></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">How we work</p>
+        <h2>From idea to codex</h2>
+      </div>
+      <ol class="steps">
+        <li class="reveal"><span>01</span><h3>Discover</h3><p>We listen, ask questions and map out exactly what you need.</p></li>
+        <li class="reveal"><span>02</span><h3>Design</h3><p>Wireframes and visual design so you can see it before we build it.</p></li>
+        <li class="reveal"><span>03</span><h3>Develop</h3><p>Clean, tested code with progress updates you can actually follow.</p></li>
+        <li class="reveal"><span>04</span><h3>Deliver</h3><p>Launch, handover and support — plus room to grow later.</p></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="section section-alt">
+    <div class="container split">
+      <div>
+        <p class="eyebrow">Who we are</p>
+        <h2>Founded in 2026, built for what comes next</h2>
+        <p>
+          Joheliv Labs is a South African technology company led by CEO
+          <strong>Jason “T.J.” Mufamadi</strong>. We exist for one reason: to take
+          ideas that only live in someone's head and turn them into working,
+          beautiful software.
+        </p>
+        <p class="muted mt-16">
+          A codex is a bound collection of knowledge. That's what we do with code —
+          we gather it, shape it and give it form.
+        </p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="#/about">About Joheliv Labs</a>
+          <a class="btn btn-ghost" href="#/team">Meet the team</a>
+        </div>
+      </div>
+      <div class="quote-card">
+        <p>“We don't just write code. We write the book that your product is built from.”</p>
+        <footer>— Jason “T.J.” Mufamadi, CEO</footer>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-band">
+    <div class="container cta-inner">
+      <div>
+        <h2>Got an idea? Let's build it.</h2>
+        <p class="muted mt-16">Free first conversation. No pressure, no jargon.</p>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="https://wa.me/27738592196" target="_blank" rel="noopener">WhatsApp 073 859 2196</a>
+        <a class="btn btn-ghost" href="mailto:labs@johelivlabs.co">labs@johelivlabs.co</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PAGE 2 — ABOUT
+     ============================================================ -->
+<section data-page="about" hidden>
+  <div class="page-hero">
+    <div class="container">
+      <p class="eyebrow"><span class="dot"></span> About us</p>
+      <h1>Where code becomes <span class="grad">codex</span></h1>
+      <p class="lede">A South African software studio founded in 2026, building the apps, websites and systems that power modern businesses.</p>
+      <p class="breadcrumb"><a href="#/home">Home</a> / About</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container split">
+      <div>
+        <h2>Our story</h2>
+        <p class="mt-16">
+          Joheliv Labs was founded in 2026 in South Africa with a simple belief:
+          technology built locally can compete globally. We started as a small
+          team of developers and designers who were tired of watching great ideas
+          get stuck at the "someday" stage.
+        </p>
+        <p class="mt-16">
+          Today we build apps, websites, online stores and custom software for
+          clients across South Africa and beyond. Every project we take on gets
+          the same treatment — careful design, clean code and a launch plan that
+          actually works.
+        </p>
+        <p class="mt-16">
+          The name says it all. A <strong>codex</strong> is a bound collection
+          of knowledge. We take raw code and turn it into something structured,
+          meaningful and built to last.
+        </p>
+      </div>
+      <div class="quote-card">
+        <p>“We don't just write code. We write the book that your product is built from.”</p>
+        <footer>— Jason “T.J.” Mufamadi, CEO</footer>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">What drives us</p>
+        <h2>Our values</h2>
+      </div>
+      <div class="grid grid-3">
+        <article class="card reveal"><div class="icon">🎯</div><h3>Clarity first</h3><p>No jargon, no hidden costs. We explain everything in plain language.</p></article>
+        <article class="card reveal"><div class="icon">🧱</div><h3>Built to last</h3><p>We write code that you can grow with — not throwaway projects.</p></article>
+        <article class="card reveal"><div class="icon">⚡</div><h3>Speed with care</h3><p>Fast delivery without cutting the corners that matter.</p></article>
+        <article class="card reveal"><div class="icon">🤝</div><h3>Honest partnership</h3><p>We tell you what's possible, what's not, and what it will cost.</p></article>
+        <article class="card reveal"><div class="icon">🇿🇦</div><h3>Proudly local</h3><p>South African roots, global standards.</p></article>
+        <article class="card reveal"><div class="icon">📚</div><h3>Always learning</h3><p>New tools, new methods — we stay sharp so your product does too.</p></article>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">By the numbers</p>
+        <h2>Joheliv Labs at a glance</h2>
+      </div>
+      <div class="stats" style="background:var(--bg-2);border:1px solid var(--line);border-radius:var(--radius);padding:36px 24px">
+        <div class="stat"><strong>2026</strong><span>Founded</span></div>
+        <div class="stat"><strong>16</strong><span>Pages of info</span></div>
+        <div class="stat"><strong>30+</strong><span>Product slots</span></div>
+        <div class="stat"><strong>ZA</strong><span>Based in South Africa</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PAGE 3 — TEAM
+     ============================================================ -->
+<section data-page="team" hidden>
+  <div class="page-hero">
+    <div class="container">
+      <p class="eyebrow"><span class="dot"></span> Our people</p>
+      <h1>Meet the <span class="grad">team</span></h1>
+      <p class="lede">The people behind every line of code, every pixel and every launch.</p>
+      <p class="breadcrumb"><a href="#/home">Home</a> / Team</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="grid grid-3">
+        <article class="team-card reveal">
+          <div class="team-avatar">JM</div>
+          <h3>Jason Mufamadi</h3>
+          <p class="role">CEO · “T.J.”</p>
+          <p>Founder and Chief Executive Officer. Leads vision, strategy and client relationships at Joheliv Labs.</p>
+        </article>
+        <article class="team-card reveal">
+          <div class="team-avatar">JL</div>
+          <h3>Joheliv Labs</h3>
+          <p class="role">Engineering</p>
+          <p>A growing team of developers building apps, websites and custom software for clients across South Africa.</p>
+        </article>
+        <article class="team-card reveal">
+          <div class="team-avatar">DS</div>
+          <h3>Design Studio</h3>
+          <p class="role">Design &amp; UX</p>
+          <p>Product designers shaping interfaces, brand systems and experiences that feel premium.</p>
+        </article>
+      </div>
+      <div class="center mt-32">
+        <p class="muted">Want to join the team? <a class="link" href="#/careers">See open roles →</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PAGE 4 — SERVICES
+     ============================================================ -->
+<section data-page="services" hidden>
+  <div class="page-hero">
+    <div class="container">
+      <p class="eyebrow"><span class="dot"></span> Services</p>
+      <h1>What we <span class="grad">build</span></h1>
+      <p class="lede">Apps, websites, online stores, custom software and design — everything that requires code and craft.</p>
+      <p class="breadcrumb"><a href="#/home">Home</a> / Services</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="grid grid-2">
+
+        <article class="card reveal" id="apps">
+          <div class="icon">📱</div>
+          <h3>App Development</h3>
+          <p>Native and cross-platform mobile apps for Android and iOS. From MVPs to production apps with authentication, payments, notifications and offline support.</p>
+          <ul class="muted" style="font-size:.88rem;display:grid;gap:6px;margin-top:12px">
+            <li>• Android &amp; iOS</li>
+            <li>• Flutter / React Native</li>
+            <li>• APIs &amp; backend integration</li>
+            <li>• App store submission</li>
+          </ul>
+        </article>
+
+        <article class="card reveal" id="web">
+          <div class="icon">🌐</div>
+          <h3>Website Development</h3>
+          <p>Fast, responsive, SEO-ready websites. Business sites, landing pages, portfolios and full web applications built on modern frameworks.</p>
+          <ul class="muted" style="font-size:.88rem;display:grid;gap:6px;margin-top:12px">
+            <li>• Business websites</li>
+            <li>• Landing pages</li>
+            <li>• Web apps &amp; dashboards</li>
+            <li>• SEO &amp; analytics setup</li>
+          </ul>
+        </article>
+
+        <article class="card reveal" id="stores">
+          <div class="icon">🛒</div>
+          <h3>Online Stores</h3>
+          <p>E-commerce builds that actually sell. Product catalogues, cart and checkout, payment gateways, delivery logic and inventory management.</p>
+          <ul class="muted" style="font-size:.88rem;display:grid;gap:6px;margin-top:12px">
+            <li>• Product catalogues</li>
+            <li>• Payment integration</li>
+            <li>• Delivery &amp; shipping</li>
+            <li>• Order management</li>
+          </ul>
+        </article>
+
+        <article class="card reveal" id="design">
+          <div class="icon">🎨</div>
+          <h3>UI / UX Design</h3>
+          <p>Design that makes products feel effortless. Interfaces, design systems, brand kits, logos and prototypes — all built around real users.</p>
+          <ul class="muted" style="font-size:.88rem;display:grid;gap:6px;margin-top:12px">
+            <li>• UI design</li>
+            <li>• UX research &amp; flows</li>
+            <li>• Design systems</li>
+            <li>• Logos &amp; brand kits</li>
+          </ul>
+        </article>
+
+        <article class="card reveal" id="custom">
+          <div class="icon">⚙️</div>
+          <h3>Custom Software</h3>
+          <p>Software built around your workflow. Booking systems, internal dashboards, automation tools, integrations and anything else your business needs.</p>
+          <ul class="muted" style="font-size:.88rem;display:grid;gap:6px;margin-top:12px">
+            <li>• Dashboards &amp; admin panels</li>
+            <li>• Booking &amp; scheduling systems</li>
+            <li>• Automation &amp; integrations</li>
+            <li>• Data &amp; reporting tools</li>
+          </ul>
+        </article>
+
+        <article class="card reveal" id="support">
+          <div class="icon">🚀</div>
+          <h3>Launch &amp; Support</h3>
+          <p>We don't disappear after launch. Hosting, deployment, monitoring, maintenance and continuous improvements — we stay with your product.</p>
+          <ul class="muted" style="font-size:.88rem;display:grid;gap:6px;margin-top:12px">
+            <li>• Hosting &amp; deployment</li>
+            <li>• Monitoring &amp; backups</li>
+            <li>• Updates &amp; fixes</li>
+            <li>• Ongoing improvements</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-band">
+    <div class="container cta-inner">
+      <div>
+        <h2>Not sure which service you need?</h2>
+        <p class="muted mt-16">Tell us the problem — we'll recommend the right approach.</p>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="#/contact">Talk to us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PAGE 5 — APPS (dynamic products)
+     ============================================================ -->
+<section data-page="apps" hidden>
+  <div class="page-hero">
+    <div class="container">
+      <p class="eyebrow"><span class="dot"></span> Our products</p>
+      <h1>Apps &amp; <span class="grad">products</span></h1>
+      <p class="lede">Every app, tool and product built by Joheliv Labs — all in one place.</p>
+      <p class="breadcrumb"><a href="#/home">Home</a> / Apps</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div id="apps-grid" class="product-grid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PAGE 6 — PORTFOLIO
+     ============================================================ -->
+<section data-page="portfolio" hidden>
+  <div class="page-hero">
+    <div class="container">
+      <p class="eyebrow"><span class="dot"></span> Selected work</p>
+      <h1>Our <span class="grad">portfolio</span></h1>
+      <p class="lede">A look at the kind of apps, websites and systems we build.</p>
+      <p class="breadcrumb"><a href="#/home">Home</a> / Portfolio</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="grid grid-3">
+        <article class="card reveal"><div class="icon">🛍️</div><h3>E-commerce store</h3><p>A full online store with product catalogue, cart, payments and delivery tracking for a South African retailer.</p></article>
+        <article class="card reveal"><div class="icon">📅</div><h3>Booking system</h3><p>An appointment booking platform with calendar sync, reminders and admin dashboard for a service business.</p></article>
+        <article class="card reveal"><div class="icon">📊</div><h3>Business dashboard</h3><p>A custom reporting dashboard pulling data from multiple sources into one clean interface.</p></article>
+        <article class="card reveal"><div class="icon">📱</div><h3>Mobile app</h3><p>A cross-platform app with authentication, push notifications and offline support.</p></article>
+        <article class="card reveal"><div class="icon">🌐</div><h3>Corporate website</h3><p>A fast, SEO-ready website with a custom CMS so the client can update content themselves.</p></article>
+        <article class="card reveal"><div class="icon">🎨</div><h3>Brand &amp; UI kit</h3><p>A complete design system — logo, colours, typography and reusable UI components.</p></article>
+      </div>
+      <div class="center mt-32">
+        <p class="muted">See live products on our <a class="link" href="#/apps">Apps page →</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PAGE 7 — PRICING
+     ============================================================ -->
+<section data-page="pricing" hidden>
+  <div class="page-hero">
+    <div class="container">
+      <p class="eyebrow"><span class="dot"></span> Pricing</p>
+      <h1>Simple, honest <span class="grad">pricing</span></h1>
+      <p class="lede">Every project is different, but here's a starting point for what to expect.</p>
+      <p class="breadcrumb"><a href="#/home">Home</a> / Pricing</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="grid grid-3">
+        <article class="price-card reveal">
+          <h3>Starter</h3>
+          <p class="desc">For small businesses getting online fast.</p>
+          <p class="price">R4,500 <small>from</small></p>
+          <ul>
+            <li>Up to 5 pages</li>
+            <li>Mobile responsive</li>
+            <li>Basic SEO setup</li>
+            <li>Contact form</li>
+            <li>1 revision round</li>
+          </ul>
+          <a class="btn btn-ghost" href="#/contact">Get started</a>
+        </article>
+        <article class="price-card featured reveal">
+          <h3>Business</h3>
+          <p class="desc">For growing businesses that need more.</p>
+          <p class="price">R12,000 <small>from</small></p>
+          <ul>
+            <li>Up to 12 pages</li>
+            <li>Custom design</li>
+            <li>CMS / admin panel</li>
+            <li>SEO &amp; analytics</li>
+            <li>3 revision rounds</li>
+            <li>30 days support</li>
+          </ul>
+          <a class="btn btn-primary" href="#/contact">Get started</a>
+        </article>
+        <article class="price-card reveal">
+          <h3>Custom</h3>
+          <p class="desc">Apps, stores and custom software.</p>
+          <p class="price">Let's talk</p>
+          <ul>
+            <li>Mobile apps</li>
+            <li>E-commerce stores</li>
+            <li>Custom software</li>
+            <li>API &amp; integrations</li>
+            <li>Dedicated support</li>
+          </ul>
+          <a class="btn btn-ghost" href="#/contact">Request a quote</a>
+        </article>
+      </div>
+      <div class="center mt-32">
+        <p class="muted">All prices are starting points in ZAR. Final quotes depend on scope. <a class="link" href="#/contact">Let's discuss your project →</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PAGE 8 — BLOG
+     ============================================================ -->
+<section data-page="blog" hidden>
+  <div class="page-hero">
+    <div class="container">
+      <p class="eyebrow"><span class="dot"></span> Insights</p>
+      <h1>From the <span class="grad">lab</span></h1>
+      <p class="lede">Notes on building software, design and running a tech studio in South Africa.</p>
+      <p class="breadcrumb"><a href="#/home">Home</a> / Blog</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="grid grid-3">
+        <article class="blog-card reveal">
+          <div class="blog-thumb">💡</div>
+          <div class="blog-body">
+            <span class="tag">Strategy</span>
+            <h3>Why your business needs a real website in 2026</h3>
+            <p>Social media isn't enough anymore. Here's why a proper website is still the foundation of any serious business.</p>
+            <span class="date">Coming soon</span>
+          </div>
+        </article>
+        <article class="blog-card reveal">
+          <div class="blog-thumb">📱</div>
+          <div class="blog-body">
+            <span class="tag">Apps</span>
+            <h3>Native vs cross-platform: which app should you build?</h3>
+            <p>A practical breakdown of the trade-offs so you can pick the right approach for your first app.</p>
+            <span class="date">Coming soon</span>
+          </div>
+        </article>
+        <article class="blog-card reveal">
+          <div class="blog-thumb">🎨</div>
+          <div class="blog-body">
+            <span class="tag">Design</span>
+            <h3>5 UI mistakes that make apps feel cheap</h3>
+            <p>Small design decisions that quietly cost you users — and how to fix them.</p>
+            <span class="date">Coming soon</span>
+          </div>
+        </article>
+        <article class="blog-card reveal">
+          <div class="blog-thumb">🛒</div>
+          <div class="blog-body">
+            <span class="tag">E-commerce</span>
+            <h3>Setting up an online store in South Africa</h3>
+            <p>Payments, delivery, compliance and the tools that actually work locally.</p>
+            <span class="date">Coming soon</span>
+          </div>
+        </article>
+        <article class="blog-card reveal">
+          <div class="blog-thumb">⚙️</div>
+          <div class="blog-body">
+            <span class="tag">Engineering</span>
+            <h3>How we structure projects at Joheliv Labs</h3>
+            <p>A behind-the-scenes look at our process, stack and how we ship on time.</p>
+            <span class="date">Coming soon</span>
+          </div>
+        </article>
+        <article class="blog-card reveal">
+          <div class="blog-thumb">🚀</div>
+          <div class="blog-body">
+            <span class="tag">Studio</span>
+            <h3>Building a tech company in South Africa in 2026</h3>
+            <p>Lessons from launching Joheliv Labs — the wins, the mistakes and what's next.</p>
+            <span class="date">Coming soon</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PAGE 9 — CONTACT
+     ============================================================ -->
+<section data-page="contact" hidden>
+  <div class="page-hero">
+    <div class="container">
+      <p class="eyebrow"><span class="dot"></span> Get in touch</p>
+      <h1>Let's build <span class="grad">something</span></h1>
+      <p class="lede">Tell us about your project. We reply within one business day.</p>
+      <p class="breadcrumb"><a href="#/home">Home</a> / Contact</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container contact-grid">
+      <div>
+        <h2>Send us a message</h2>
+        <p class="muted mt-16">Fill in the form and we'll get back to you. Prefer WhatsApp? Tap the button on the right.</p>
+        <form class="form mt-32" id="contact-form" action="https://formsubmit.co/labs@johelivlabs.co" method="POST">
+          <div class="field">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" required placeholder="e.g. Thabo Mokoena">
+          </div>
+          <div class="field">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com">
+          </div>
+          <div class="field">
+            <label for="service">What do you need?</label>
+            <select id="service" name="service">
+              <option>App development</option>
+              <option>Website development</option>
+              <option>Online store</option>
+              <option>UI/UX design</option>
+              <option>Custom software</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Project details</label>
+            <textarea id="message" name="message" required placeholder="Tell us what you're building, your timeline and your budget range..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send message</button>
+          <p class="muted" style="font-size:.8rem">By sending, you agree to our <a class="link" href="#/privacy-policy">Privacy Policy</a>.</p>
+        </form>
+      </div>
+
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="icon">💬</div>
+          <div>
+            <h4>WhatsApp</h4>
+            <a href="https://wa.me/27738592196" target="_blank" rel="noopener">073 859 2196</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon">✉️</div>
+          <div>
+            <h4>Business email</h4>
+            <a href="mailto:labs@johelivlabs.co">labs@johelivlabs.co</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon">📧</div>
+          <div>
+            <h4>General email</h4>
+            <a href="mailto:johelivlabs@gmail.com">johelivlabs@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon">📍</div>
+          <div>
+            <h4>Location</h4>
+            <p>South Africa 🇿🇦 · Working with clients worldwide</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon">🕐</div>
+          <div>
+            <h4>Response time</h4>
+            <p>Usually within one business day</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PAGE 10 — CAREERS
+     ============================================================ -->
+<section data-page="careers" hidden>
+  <div class="page-hero">
+    <div class="container">
+      <p class="eyebrow"><span class="dot"></span> Join us</p>
+      <h1>Build with <span class="grad">Joheliv Labs</span></h1>
+      <p class="lede">We're always looking for talented developers, designers and problem-solvers.</p>
+      <p class="breadcrumb"><a href="#/home">Home</a> / Careers</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Open roles</h2>
+        <p class="muted">Don't see your role? Send us your portfolio anyway — we keep good people in mind.</p>
+      </div>
+      <div class="grid grid-2">
+        <article class="card reveal">
+          <div class="icon">💻</div>
+          <h3>Frontend Developer</h3>
+          <p>Build fast, beautiful interfaces with modern JavaScript frameworks. Remote-friendly.</p>
+          <a class="link" href="mailto:labs@johelivlabs.co?subject=Frontend%20Developer%20Application">Apply by email →</a>
+        </article>
+        <article class="card reveal">
+          <div class="icon">⚙️</div>
+          <h3>Backend Developer</h3>
+          <p>Design APIs, databases and server-side logic for apps and web platforms.</p>
+          <a class="link" href="mailto:labs@johelivlabs.co?subject=Backend%20Developer%20Application">Apply by email →</a>
+        </article>
+        <article class="card reveal">
+          <div class="icon">🎨</div>
+          <h3>UI/UX Designer</h3>
+          <p>Design interfaces and experiences that feel premium and effortless.</p>
+          <a class="link" href="mailto:labs@johelivlabs.co?subject=UI%2FUX%20Designer%20Application">Apply by email →</a>
+        </article>
+        <article class="card reveal">
+          <div class="icon">📱</div>
+          <h3>Mobile Developer</h3>
+          <p>Build cross-platform mobile apps with Flutter or React Native.</p>
+          <a class="link" href="mailto:labs@johelivlabs.co?subject=Mobile%20Developer%20Application">Apply by email →</a>
+        </article>
+      </div>
+      <div class="center mt-32">
+        <a class="btn btn-primary" href="mailto:labs@johelivlabs.co?subject=General%20Application">Send a general application</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PAGE 11 — SUPPORT
+     ============================================================ -->
+<section data-page="support" hidden>
+  <div class="page-hero">
+    <div class="container">
+      <p class="eyebrow"><span class="dot"></span> Support</p>
+      <h1>We've got your <span class="grad">back</span></h1>
+      <p class="lede">Help, maintenance and ongoing improvements for every product we build.</p>
+      <p class="breadcrumb"><a href="#/home">Home</a> / Support</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="grid grid-3">
+        <article class="card reveal">
+          <div class="icon">🛠️</div>
+          <h3>Technical support</h3>
+          <p>Something broken or not working as expected? Contact us and we'll sort it out.</p>
+          <a class="link" href="mailto:labs@johelivlabs.co">labs@johelivlabs.co →</a>
+        </article>
+        <article class="card reveal">
+          <div class="icon">📦</div>
+          <h3>Updates &amp; maintenance</h3>
+          <p>Regular updates, security patches and performance improvements for your product.</p>
+          <a class="link" href="#/contact">Request maintenance →</a>
+        </article>
+        <article class="card reveal">
+          <div class="icon">🔄</div>
+          <h3>New features</h3>
+          <p>Ready to add something new to your app or website? Let's scope it out.</p>
+          <a class="link" href="#/contact">Start a request →</a>
+        </article>
+        <article class="card reveal">
+          <div class="icon">🌐</div>
+          <h3>Hosting &amp; domains</h3>
+          <p>We can manage hosting, domains, SSL and deployment so you don't have to.</p>
+          <a class="link" href="#/contact">Ask about hosting →</a>
+        </article>
+        <article class="card reveal">
+          <div class="icon">📊</div>
+          <h3>Monitoring &amp; backups</h3>
+          <p>Uptime monitoring, automated backups and alerts so nothing catches you off guard.</p>
+          <a class="link" href="#/contact">Learn more →</a>
+        </article>
+        <article class="card reveal">
+          <div class="icon">💬</div>
+          <h3>WhatsApp support</h3>
+          <p>Quick questions? Message us directly on WhatsApp during business hours.</p>
+          <a class="link" href="https://wa.me/27738592196" target="_blank" rel="noopener">073 859 2196 →</a>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PAGE 12 — FAQ
+     ============================================================ -->
+<section data-page="faq" hidden>
+  <div class="page-hero">
+    <div class="container">
+      <p class="eyebrow"><span class="dot"></span> FAQ</p>
+      <h1>Frequently asked <span class="grad">questions</span></h1>
+      <p class="lede">Quick answers to the things people ask us most.</p>
+      <p class="breadcrumb"><a href="#/home">Home</a> / FAQ</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="faq-list">
+        <details class="faq-item"><summary>What does Joheliv Labs do?</summary><div class="faq-body">We build apps, websites, online stores and custom software. We also handle UI/UX design, branding and ongoing support.</div></details>
+        <details class="faq-item"><summary>Where are you based?</summary><div class="faq-body">We're a South African company founded in 2026. We work with clients locally and internationally — most of our collaboration happens online.</div></details>
+        <details class="faq-item"><summary>How much does a website cost?</summary><div class="faq-body">Our Starter websites begin around R4,500. Business websites with custom design and a CMS start around R12,000. Apps, stores and custom software are quoted per project. See our <a class="link" href="#/pricing">Pricing page</a>.</div></details>
+        <details class="faq-item"><summary>How long does a project take?</summary><div class="faq-body">A simple website can take 1–2 weeks. A business site or small app usually takes 3–6 weeks. Larger custom builds are scoped individually.</div></details>
+        <details class="faq-item"><summary>Do you offer support after launch?</summary><div class="faq-body">Yes. Every project includes a support window, and we offer ongoing maintenance plans. See our <a class="link" href="#/support">Support page</a>.</div></details>
+        <details class="faq-item"><summary>Can you redesign my existing website or app?</summary><div class="faq-body">Absolutely. We can refresh the design, rebuild the code, improve speed and SEO, or extend what you already have.</div></details>
+        <details class="faq-item"><summary>How do I get a quote?</summary><div class="faq-body">Message us on WhatsApp at <a class="link" href="https://wa.me/27738592196" target="_blank" rel="noopener">073 859 2196</a>, email <a class="link" href="mailto:labs@johelivlabs.co">labs@johelivlabs.co</a>, or use our <a class="link" href="#/contact">contact form</a>.</div></details>
+        <details class="faq-item"><summary>What technologies do you use?</summary><div class="faq-body">We work with modern web and mobile stacks — JavaScript, React, Node, Flutter, and more — chosen to fit each project. We care more about the right tool than the trendiest one.</div></details>
+        <details class="faq-item"><summary>Do you work with clients outside South Africa?</summary><div class="faq-body">Yes. We collaborate remotely with clients worldwide. Time zones are never a problem for us.</div></details>
+        <details class="faq-item"><summary>How do payments work?</summary><div class="faq-body">Typically a deposit upfront and the balance on delivery. For larger projects we split payments across milestones. Details are agreed in writing before we start.</div></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PAGE 13 — SITEMAP
+     ============================================================ -->
+<section data-page="sitemap" hidden>
+  <div class="page-hero">
+    <div class="container">
+      <p class="eyebrow"><span class="dot"></span> Navigation</p>
+      <h1>Site<span class="grad">map</span></h1>
+      <p class="lede">Every page on the Joheliv Labs website, in one place.</p>
+      <p class="breadcrumb"><a href="#/home">Home</a> / Sitemap</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="sitemap-grid">
+        <div class="sitemap-col">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#/home">Home</a></li>
+            <li><a href="#/about">About Us</a></li>
+            <li><a href="#/team">Team</a></li>
+            <li><a href="#/careers">Careers</a></li>
+            <li><a href="#/blog">Blog</a></li>
+            <li><a href="#/portfolio">Portfolio</a></li>
+          </ul>
+        </div>
+        <div class="sitemap-col">
+          <h3>Services &amp; Products</h3>
+          <ul>
+            <li><a href="#/services">Services</a></li>
+            <li><a href="#/apps">Apps</a></li>
+            <li><a href="#/pricing">Pricing</a></li>
+            <li><a href="#/support">Support</a></li>
+            <li><a href="#/faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="sitemap-col">
+          <h3>Contact &amp; Legal</h3>
+          <ul>
+            <li><a href="#/contact">Contact</a></li>
+            <li><a href="#/privacy-policy">Privacy Policy</a></li>
+            <li><a href="#/terms">Terms of Service</a></li>
+            <li><a href="#/cookies">Cookie Policy</a></li>
+            <li><a href="#/sitemap">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PAGE 14 — PRIVACY POLICY
+     ============================================================ -->
+<section data-page="privacy-policy" hidden>
+  <div class="page-hero">
+    <div class="container">
+      <p class="eyebrow"><span class="dot"></span> Legal</p>
+      <h1>Privacy <span class="grad">Policy</span></h1>
+      <p class="lede">How Joheliv Labs collects, uses and protects your information.</p>
+      <p class="breadcrumb"><a href="#/home">Home</a> / Privacy Policy</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="legal">
+        <p><strong>Last updated:</strong> 1 January 2026</p>
+
+        <h2>1. Introduction</h2>
+        <p>Joheliv Labs ("we", "us", "our") respects your privacy. This Privacy Policy explains what information we collect, how we use it, and the choices you have. By using our website or services, you agree to this policy.</p>
+
+        <h2>2. Information we collect</h2>
+        <p>We may collect:</p>
+        <ul>
+          <li>Contact details you provide (name, email, phone number) when you fill in a form or message us.</li>
+          <li>Project information you share when requesting a quote or service.</li>
+          <li>Basic technical data such as browser type, device and pages visited (through analytics).</li>
+        </ul>
+
+        <h2>3. How we use your information</h2>
+        <p>We use your information to:</p>
+        <ul>
+          <li>Respond to your enquiries and provide quotes.</li>
+          <li>Deliver services you have requested.</li>
+          <li>Improve our website and services.</li>
+          <li>Comply with legal obligations.</li>
+        </ul>
+
+        <h2>4. Sharing your information</h2>
+        <p>We do not sell your personal information. We only share it with service providers who help us operate (for example, hosting or email providers), and only to the extent needed.</p>
+
+        <h2>5. Data security</h2>
+        <p>We take reasonable steps to protect your information, including using secure connections and limiting access to your data. No system is 100% secure, so we cannot guarantee absolute security.</p>
+
+        <h2>6. Your rights</h2>
+        <p>You may request access to, correction of, or deletion of your personal information at any time by emailing <a href="mailto:labs@johelivlabs.co">labs@johelivlabs.co</a>.</p>
+
+        <h2>7. Cookies</h2>
+        <p>Our website may use cookies to improve your experience. See our <a href="#/cookies">Cookie Policy</a> for details.</p>
+
+        <h2>8. Changes to this policy</h2>
+        <p>We may update this policy from time to time. The "Last updated" date at the top shows when it was last changed.</p>
+
+        <h2>9. Contact</h2>
+        <p>Questions about this policy? Email <a href="mailto:labs@johelivlabs.co">labs@johelivlabs.co</a> or <a href="mailto:johelivlabs@gmail.com">johelivlabs@gmail.com</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PAGE 15 — TERMS
+     ============================================================ -->
+<section data-page="terms" hidden>
+  <div class="page-hero">
+    <div class="container">
+      <p class="eyebrow"><span class="dot"></span> Legal</p>
+      <h1>Terms of <span class="grad">Service</span></h1>
+      <p class="lede">The rules for using our website and working with Joheliv Labs.</p>
+      <p class="breadcrumb"><a href="#/home">Home</a> / Terms</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="legal">
+        <p><strong>Last updated:</strong> 1 January 2026</p>
+
+        <h2>1. Agreement</h2>
+        <p>By using the Joheliv Labs website or engaging our services, you agree to these Terms. If you do not agree, please do not use our website or services.</p>
+
+        <h2>2. Services</h2>
+        <p>Joheliv Labs provides software development, design and related digital services. Specific deliverables, timelines and costs are agreed in a written quote or contract for each project.</p>
+
+        <h2>3. Quotes and payment</h2>
+        <p>Quotes are valid for 30 days unless stated otherwise. Projects typically require a deposit before work begins, with the balance due on delivery or per milestones. Payment terms are set out in each quote.</p>
+
+        <h2>4. Client responsibilities</h2>
+        <p>You agree to provide accurate information, timely feedback and any content or access we reasonably need to complete your project. Delays caused by missing inputs may affect timelines.</p>
+
+        <h2>5. Intellectual property</h2>
+        <p>On full payment, you receive ownership of the final deliverables created specifically for your project, unless otherwise agreed. Joheliv Labs retains the right to use general tools, frameworks and know-how across projects, and may showcase completed work in our portfolio unless you request otherwise.</p>
+
+        <h2>6. Revisions and scope</h2>
+        <p>Each project includes a set number of revision rounds as agreed in the quote. Additional work beyond the agreed scope will be quoted separately.</p>
+
+        <h2>7. Warranties and liability</h2>
+        <p>We aim to deliver work of high quality, but our services are provided "as is". To the maximum extent allowed by law, Joheliv Labs is not liable for indirect or consequential losses, and our total liability is limited to the amount you paid for the specific service.</p>
+
+        <h2>8. Termination</h2>
+        <p>Either party may end a project in writing. You agree to pay for work completed up to the termination date.</p>
+
+        <h2>9. Governing law</h2>
+        <p>These terms are governed by the laws of South Africa.</p>
+
+        <h2>10. Contact</h2>
+        <p>Questions? Email <a href="mailto:labs@johelivlabs.co">labs@johelivlabs.co</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PAGE 16 — COOKIES
+     ============================================================ -->
+<section data-page="cookies" hidden>
+  <div class="page-hero">
+    <div class="container">
+      <p class="eyebrow"><span class="dot"></span> Legal</p>
+      <h1>Cookie <span class="grad">Policy</span></h1>
+      <p class="lede">How and why we use cookies on the Joheliv Labs website.</p>
+      <p class="breadcrumb"><a href="#/home">Home</a> / Cookies</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="legal">
+        <p><strong>Last updated:</strong> 1 January 2026</p>
+
+        <h2>1. What are cookies?</h2>
+        <p>Cookies are small text files stored on your device when you visit a website. They help websites remember your preferences and understand how people use the site.</p>
+
+        <h2>2. How we use cookies</h2>
+        <p>We may use cookies to:</p>
+        <ul>
+          <li>Keep the website working properly.</li>
+          <li>Remember your preferences.</li>
+          <li>Understand how visitors use the site (analytics).</li>
+          <li>Improve performance and content.</li>
+        </ul>
+
+        <h2>3. Types of cookies we use</h2>
+        <ul>
+          <li><strong>Essential cookies</strong> — needed for the website to function.</li>
+          <li><strong>Analytics cookies</strong> — help us understand traffic and usage.</li>
+          <li><strong>Preference cookies</strong> — remember your settings.</li>
+        </ul>
+
+        <h2>4. Managing cookies</h2>
+        <p>You can control or delete cookies through your browser settings. Disabling some cookies may affect how the website works.</p>
+
+        <h2>5. Third-party cookies</h2>
+        <p>Some services we use (such as analytics providers) may set their own cookies. We do not control these cookies.</p>
+
+        <h2>6. Contact</h2>
+        <p>Questions about cookies? Email <a href="mailto:labs@johelivlabs.co">labs@johelivlabs.co</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="f-grid">
+      <div class="f-brand">
+        <a class="brand" href="#/home">
+          <img src="icon-192.png" alt="Joheliv Labs logo" width="36" height="36" onerror="this.style.display='none'">
+          <span><strong>Joheliv</strong> Labs</span>
+        </a>
+        <p class="f-slogan">Where code becomes codex.</p>
+        <p class="f-meta">Founded 2026 · South Africa 🇿🇦</p>
+      </div>
+      <div class="f-col"><h4>Company</h4><ul>
+        <li><a href="#/about">About Us</a></li>
+        <li><a href="#/team">Team</a></li>
+        <li><a href="#/careers">Careers</a></li>
+        <li><a href="#/blog">Blog</a></li>
+        <li><a href="#/portfolio">Portfolio</a></li>
+        <li><a href="#/sitemap">Sitemap</a></li>
+      </ul></div>
+      <div class="f-col"><h4>Services</h4><ul>
+        <li><a href="#/services">App Development</a></li>
+        <li><a href="#/services">Web Development</a></li>
+        <li><a href="#/services">Online Stores</a></li>
+        <li><a href="#/services">UI/UX Design</a></li>
+        <li><a href="#/apps">Our Apps</a></li>
+        <li><a href="#/pricing">Pricing</a></li>
+      </ul></div>
+      <div class="f-col"><h4>Contact</h4><ul>
+        <li><a href="https://wa.me/27738592196" target="_blank" rel="noopener">WhatsApp: 073 859 2196</a></li>
+        <li><a href="mailto:labs@johelivlabs.co">labs@johelivlabs.co</a></li>
+        <li><a href="mailto:johelivlabs@gmail.com">johelivlabs@gmail.com</a></li>
+        <li><a href="#/contact">Contact Form</a></li>
+        <li><a href="#/support">Support</a></li>
+        <li><a href="#/faq">FAQ</a></li>
+      </ul></div>
+    </div>
+    <div class="f-bottom">
+      <p>© 2026 Joheliv Labs. All rights reserved.</p>
+      <ul class="f-legal">
+        <li><a href="#/privacy-policy">Privacy</a></li>
+        <li><a href="#/terms">Terms</a></li>
+        <li><a href="#/cookies">Cookies</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ==========================================================================
+   JOHELIV LABS — APP SCRIPT
+   --------------------------------------------------------------------------
+   1. PRODUCTS: Edit only the `name` and `url` fields below.
+      - 30 slots are pre-built. Fill in a name + url to make a product appear.
+      - Leave name empty ("") to hide that slot.
+      - Images: upload `image-1.png` … `image-30.png` next to this HTML file
+        (the number matches the slot position, 1 = first item).
+      - If an image is missing, a styled letter fallback is shown automatically.
+   2. ROUTER: Hash-based. Each `#/page` shows the matching <section data-page>.
+   ========================================================================== */
+
+/* ---------- 1. PRODUCTS ARRAY — EDIT THIS ----------
+   Fill in name + url. Everything else is automatic.
+   The example products below can be deleted or replaced. */
+const PRODUCTS = [
+  // slot 1
+  { name: "Joheliv Notes", url: "#/apps", desc: "A clean note-taking app." },
+  // slot 2
+  { name: "Joheliv Store", url: "#/apps", desc: "Lightweight e-commerce starter." },
+  // slot 3
+  { name: "Joheliv Booking", url: "#/apps", desc: "Appointment booking system." },
+  // slot 4
+  { name: "Joheliv Dash", url: "#/apps", desc: "Analytics dashboard for small business." },
+  // slot 5
+  { name: "", url: "", desc: "" },
+  // slot 6
+  { name: "", url: "", desc: "" },
+  // slot 7
+  { name: "", url: "", desc: "" },
+  // slot 8
+  { name: "", url: "", desc: "" },
+  // slot 9
+  { name: "", url: "", desc: "" },
+  // slot 10
+  { name: "", url: "", desc: "" },
+  // slot 11
+  { name: "", url: "", desc: "" },
+  // slot 12
+  { name: "", url: "", desc: "" },
+  // slot 13
+  { name: "", url: "", desc: "" },
+  // slot 14
+  { name: "", url: "", desc: "" },
+  // slot 15
+  { name: "", url: "", desc: "" },
+  // slot 16
+  { name: "", url: "", desc: "" },
+  // slot 17
+  { name: "", url: "", desc: "" },
+  // slot 18
+  { name: "", url: "", desc: "" },
+  // slot 19
+  { name: "", url: "", desc: "" },
+  // slot 20
+  { name: "", url: "", desc: "" },
+  // slot 21
+  { name: "", url: "", desc: "" },
+  // slot 22
+  { name: "", url: "", desc: "" },
+  // slot 23
+  { name: "", url: "", desc: "" },
+  // slot 24
+  { name: "", url: "", desc: "" },
+  // slot 25
+  { name: "", url: "", desc: "" },
+  // slot 26
+  { name: "", url: "", desc: "" },
+  // slot 27
+  { name: "", url: "", desc: "" },
+  // slot 28
+  { name: "", url: "", desc: "" },
+  // slot 29
+  { name: "", url: "", desc: "" },
+  // slot 30
+  { name: "", url: "", desc: "" }
+];
+
+/* ---------- 2. PRODUCT RENDERING ---------- */
+function productCard(p, idx) {
+  const letter = (p.name || "?").trim().charAt(0).toUpperCase();
+  const img = `image-${idx}.png`;
+  const desc = p.desc || "Built by Joheliv Labs.";
+  const url = p.url || "#/apps";
+  return `
+    <article class="product-card reveal">
+      <div class="product-thumb">
+        <img src="${img}" alt="${escapeHtml(p.name)} icon" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <span class="fallback" style="display:none">${letter}</span>
+      </div>
+      <h3>${escapeHtml(p.name)}</h3>
+      <p>${escapeHtml(desc)}</p>
+      <a class="btn btn-ghost" href="${escapeAttr(url)}" target="_blank" rel="noopener">Open app</a>
+    </article>`;
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function escapeAttr(s) { return escapeHtml(s); }
+
+function renderProducts() {
+  // collect only filled slots, tracking their original slot number (1-based)
+  const filled = PRODUCTS
+    .map((p, i) => ({ ...p, slot: i + 1 }))
+    .filter(p => p.name && p.name.trim());
+
+  const featuredEl = document.getElementById("featured-grid");
+  const appsEl = document.getElementById("apps-grid");
+
+  const emptyMsg = `
+    <div class="empty-state">
+      <h3>New products coming soon</h3>
+      <p>We're preparing our next release. In the meantime, <a class="link" href="#/contact">get in touch</a> to talk about what we can build for you.</p>
+    </div>`;
+
+  if (!filled.length) {
+    if (featuredEl) featuredEl.innerHTML = emptyMsg;
+    if (appsEl) appsEl.innerHTML = emptyMsg;
+    return;
+  }
+
+  const cards = filled.map(p => productCard(p, p.slot));
+
+  if (featuredEl) featuredEl.innerHTML = cards.slice(0, 4).join("");
+  if (appsEl) appsEl.innerHTML = cards.join("");
+}
+
+/* ---------- 3. ROUTER ---------- */
+const ROUTES = [
+  "home","about","team","services","apps","portfolio","pricing","blog",
+  "contact","careers","support","faq","sitemap","privacy-policy","terms","cookies"
+];
+
+const TITLES = {
+  home: "Joheliv Labs | Where code becomes codex",
+  about: "About | Joheliv Labs",
+  team: "Team | Joheliv Labs",
+  services: "Services | Joheliv Labs",
+  apps: "Apps & Products | Joheliv Labs",
+  portfolio: "Portfolio | Joheliv Labs",
+  pricing: "Pricing | Joheliv Labs",
+  blog: "Blog | Joheliv Labs",
+  contact: "Contact | Joheliv Labs",
+  careers: "Careers | Joheliv Labs",
+  support: "Support | Joheliv Labs",
+  faq: "FAQ | Joheliv Labs",
+  sitemap: "Sitemap | Joheliv Labs",
+  "privacy-policy": "Privacy Policy | Joheliv Labs",
+  terms: "Terms of Service | Joheliv Labs",
+  cookies: "Cookie Policy | Joheliv Labs"
+};
+
+function currentRoute() {
+  let h = location.hash.replace(/^#\/?/, "").trim();
+  if (!h) h = "home";
+  return ROUTES.includes(h) ? h : "home";
+}
+
+function navigate() {
+  const route = currentRoute();
+
+  // show/hide page sections
+  document.querySelectorAll("[data-page]").forEach(el => {
+    el.hidden = el.dataset.page !== route;
+  });
+
+  // update title
+  document.title = TITLES[route] || TITLES.home;
+
+  // update active nav
+  document.querySelectorAll("[data-nav]").forEach(a => {
+    const active = a.dataset.nav === route;
+    if (active) a.setAttribute("aria-current", "page");
+    else a.removeAttribute("aria-current");
+  });
+
+  // close mobile menu
+  const nav = document.getElementById("site-nav");
+  const toggle = document.querySelector(".nav-toggle");
+  if (nav) nav.classList.remove("open");
+  if (toggle) toggle.setAttribute("aria-expanded", "false");
+
+  // re-observe reveals for the newly shown page
+  observeReveals();
+
+  // scroll to top
+  window.scrollTo({ top: 0, behavior: "auto" });
+}
+
+/* ---------- 4. MOBILE NAV ---------- */
+function initNav() {
+  const toggle = document.querySelector(".nav-toggle");
+  const nav = document.getElementById("site-nav");
+  if (!toggle || !nav) return;
+  toggle.addEventListener("click", () => {
+    const open = nav.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+}
+
+/* ---------- 5. SCROLL REVEAL ---------- */
+let revealObserver;
+function observeReveals() {
+  if (!("IntersectionObserver" in window)) {
+    document.querySelectorAll(".reveal").forEach(el => el.classList.add("visible"));
+    return;
+  }
+  if (!revealObserver) {
+    revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+  }
+  document.querySelectorAll(".reveal:not(.visible)").forEach(el => revealObserver.observe(el));
+}
+
+/* ---------- 6. INIT ---------- */
+document.addEventListener("DOMContentLoaded", () => {
+  renderProducts();
+  initNav();
+  navigate();
+  window.addEventListener("hashchange", navigate);
+});
+</script>
+</body>
+</html>
